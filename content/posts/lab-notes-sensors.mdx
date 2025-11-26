@@ -1,0 +1,20 @@
+---
+title: 'Lab Notes · Sensors + Storytelling'
+subtitle: 'Connecting ambient sensors to narrative cues.'
+summary: 'Side quest: prototyping a dashboard that turns sensor data into story beats. Expect follow-ups once the graphs stop jittering.'
+publishedAt: '2024-05-02'
+tags:
+  - iot
+  - storytelling
+---
+
+I built a tiny bridge between particulate sensors and narrative pacing. When the studio air shifts, the UI nudges the story:
+
+```js
+const quality = getAirQuality();
+if (quality === 'stale') {
+  timeline.push({ type: 'break', note: 'Open the windows.' });
+}
+```
+
+It is whimsical, but it keeps me aware of the space I build in.
