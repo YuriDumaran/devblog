@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #05070f;
+}
+
+::selection {
+  background-color: #38bdf8;
+  color: #05070f;
+}
+
+.prose {
+  max-width: 65ch;
+}
+
+.prose :where(p, ul, ol, li, blockquote, strong, em):not(:where([class~='not-prose'] *)) {
+  color: #cbd5f5;
+}
+
+.prose :where(h1, h2, h3, h4):not(:where([class~='not-prose'] *)) {
+  color: #f8fafc;
+}
+
+.prose a {
+  color: #38bdf8;
+  text-decoration: underline;
+}
